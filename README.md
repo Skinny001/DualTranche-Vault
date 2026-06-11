@@ -563,6 +563,31 @@ hook = DualTrancheVaultHook(address(FLAGS));
 
 ---
 
+## Deployed Contracts — Unichain Sepolia (chain 1301)
+
+> Live deployment — 2026-06-11
+
+| Contract | Address |
+|---|---|
+| Token0 (TKNA) | [`0xA6c15eDC8ceffb558A54ead5bd9d833A589276bC`](https://sepolia.uniscan.xyz/address/0xA6c15eDC8ceffb558A54ead5bd9d833A589276bC) |
+| Token1 (TKNB) | [`0xF396F264b10EbB39D444ABB9677059B5AF48f334`](https://sepolia.uniscan.xyz/address/0xF396F264b10EbB39D444ABB9677059B5AF48f334) |
+| MockERC4626Vault | [`0xc2Dc300E524Cb9Ee18887E7c2333D24403dF076A`](https://sepolia.uniscan.xyz/address/0xc2Dc300E524Cb9Ee18887E7c2333D24403dF076A) |
+| VolatilityOracle | [`0xEB9E7cd23A933310e4FA1AFc46121B4654656611`](https://sepolia.uniscan.xyz/address/0xEB9E7cd23A933310e4FA1AFc46121B4654656611) |
+| **DualTrancheVaultHook** | [`0xA48A59E8d0D079F3458EbF62b46E08E288059F40`](https://sepolia.uniscan.xyz/address/0xA48A59E8d0D079F3458EbF62b46E08E288059F40) |
+| SeniorShares `sLP-a6c15edc-f396f264` | [`0xC1086b14095F4738f23234DE5801d8E932213538`](https://sepolia.uniscan.xyz/address/0xC1086b14095F4738f23234DE5801d8E932213538) |
+| JuniorShares `jLP-a6c15edc-f396f264` | [`0x4f695E4cAd76732B9157Ca4C9eFECe8417358313`](https://sepolia.uniscan.xyz/address/0x4f695E4cAd76732B9157Ca4C9eFECe8417358313) |
+
+**Pool**
+
+| Parameter | Value |
+|---|---|
+| PoolId | `0xf0be170d...b012b814` |
+| Fee | 0.3% (3000 ppm) |
+| Senior range | Full range `[-887220, 887220]` |
+| Junior vol threshold | 5000 bps (50% annualized) |
+
+---
+
 ## License
 
 MIT — see [LICENSE](LICENSE)

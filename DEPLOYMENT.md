@@ -326,26 +326,37 @@ forge verify-contract $ORACLE src/oracles/VolatilityOracle.sol:VolatilityOracle 
 # Verify DualTrancheVaultHook
 forge verify-contract $HOOK src/DualTrancheVaultHook.sol:DualTrancheVaultHook \
   --chain 1301 \
-  --constructor-args $(cast abi-encode "constructor(address,address)" $POOL_MANAGER $ORACLE) \
+  --constructor-args $(cast abi-encode "constructor(address,address,address)" $POOL_MANAGER $ORACLE $DEPLOYER) \
   --etherscan-api-key $ETHERSCAN_API_KEY \
   --verifier-url https://api-sepolia.uniscan.xyz/api
 ```
 
 ---
 
-## Deployed Addresses
+## Deployed Addresses — Unichain Sepolia (chain 1301)
 
-> Fill this section in after deployment.
+> Deployed 2026-06-11 by `0x89a68d0731F9Bc419d606f1F31Ead04c3fBDFdd6`
 
-| Contract | Address | Tx hash |
-|---|---|---|
-| Token0 (TKNA) | | |
-| Token1 (TKNB) | | |
-| MockERC4626Vault | | |
-| VolatilityOracle | | |
-| DualTrancheVaultHook | | |
-| SeniorShares (sLP) | | |
-| JuniorShares (jLP) | | |
+| Contract | Address |
+|---|---|
+| Token0 (TKNA) | [`0xA6c15eDC8ceffb558A54ead5bd9d833A589276bC`](https://sepolia.uniscan.xyz/address/0xA6c15eDC8ceffb558A54ead5bd9d833A589276bC) |
+| Token1 (TKNB) | [`0xF396F264b10EbB39D444ABB9677059B5AF48f334`](https://sepolia.uniscan.xyz/address/0xF396F264b10EbB39D444ABB9677059B5AF48f334) |
+| MockERC4626Vault | [`0xc2Dc300E524Cb9Ee18887E7c2333D24403dF076A`](https://sepolia.uniscan.xyz/address/0xc2Dc300E524Cb9Ee18887E7c2333D24403dF076A) |
+| VolatilityOracle | [`0xEB9E7cd23A933310e4FA1AFc46121B4654656611`](https://sepolia.uniscan.xyz/address/0xEB9E7cd23A933310e4FA1AFc46121B4654656611) |
+| DualTrancheVaultHook | [`0xA48A59E8d0D079F3458EbF62b46E08E288059F40`](https://sepolia.uniscan.xyz/address/0xA48A59E8d0D079F3458EbF62b46E08E288059F40) |
+| SeniorShares (sLP-a6c15edc-f396f264) | [`0xC1086b14095F4738f23234DE5801d8E932213538`](https://sepolia.uniscan.xyz/address/0xC1086b14095F4738f23234DE5801d8E932213538) |
+| JuniorShares (jLP-a6c15edc-f396f264) | [`0x4f695E4cAd76732B9157Ca4C9eFECe8417358313`](https://sepolia.uniscan.xyz/address/0x4f695E4cAd76732B9157Ca4C9eFECe8417358313) |
+
+**Pool**
+
+| Parameter | Value |
+|---|---|
+| PoolId | `0xf0be170d9ee046d9efa8e9c599196f7f0415a8616cee7a169ee80322b012b814` |
+| Fee | 3000 (0.3%) |
+| Tick spacing | 60 |
+| Senior range | `[-887220, 887220]` (full range) |
+| Junior vol threshold | 5000 bps (50%) |
+| Initial price | 1:1 (sqrtPriceX96 = 79228162514264337593543950336) |
 
 ---
 
